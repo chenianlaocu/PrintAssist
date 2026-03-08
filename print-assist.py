@@ -631,7 +631,14 @@ class LuoLiPrintAssistant(QWidget):
         dlg.setStyleSheet(DARK_QSS)
 
         layout = QVBoxLayout(dlg)
-        label = QLabel('打印助手由 <a href="https://hiluoli.cn/print-assist">hiluoli.cn</a> @Chenianlaocu开发。')
+        about_html = (
+            '打印助手由 <a href="https://hiluoli.cn/print-assist">hiluoli.cn</a> @Chenianlaocu 开发。<br><br>'
+            '<b>开源信息</b><br>'
+            '本项目开源地址：<a href="https://github.com/chenianlaocu/PrintAssist">https://github.com/chenianlaocu/PrintAssist</a><br>'
+            '使用了 <a href="https://github.com/th4c3y/PrintPage-">PrintPage</a> 打印的代码，感谢其作者 <a href="https://github.com/th4c3y">th4c3y</a>。<br>'
+            '使用的协议：AGPL3'
+        )
+        label = QLabel(about_html)
         label.setWordWrap(True)
         label.setTextFormat(Qt.TextFormat.RichText)
         label.setTextInteractionFlags(Qt.TextInteractionFlag.TextBrowserInteraction)
